@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colors",
+  "info": {
+    "singularName": "color",
+    "pluralName": "colors",
+    "displayName": "Color",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "NameEngl": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "NameEngl"
+    },
+    "colorCode": {
+      "type": "string"
+    },
+    "model": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::model.model",
+      "mappedBy": "colors"
+    }
+  }
+}
